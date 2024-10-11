@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Formulario cumpleaños</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
+
+<form >
+  <ul>
+    <li>
+      <label for="name">Nombre:</label>
+      <input type="text" id="name"/>
+    </li>
+
+    <li>
+        <label for="surnames">Apellidos</label>
+        <input type="text" id="surnames"/>
+    </li>
+
+    <li>
+      <label for="mail">Correo electrónico:</label>
+      <input type="email" id="mail"/>
+    </li>
+
+    <li>
+        <label for="birthday">Fecha de nacimiento:</label>
+        <input type="date" id="birthday" value="2018-07-22" min="1999-01-01" max="2024-10-07" />
+    </li>
+
+    <li>
+        <label for="dish">Postre favorito</label>
+        <select id="dish">
+            <option value="opt1">Natillas con galletica y canela de las que preparaba tu abuela</option>
+            <option value="opt2">Manzana caramelizada típicia de feria</option>
+            <option value="opt3">Mochi de coco 120% japonés</option>
+            <option value="opt4">Dango tricolor</option>
+      </select>
+    </li>
+
+    <li>
+        <fieldset>
+            <legend>Selecciona tu postre favorito:</legend>
+          
+            <div>
+              <input type="radio" id="huey"/>
+              <label for="huey">Huey</label>
+            </div>
+          
+            <div>
+              <input type="radio" id="dewey"/>
+              <label for="dewey">Dewey</label>
+            </div>
+          
+            <div>
+              <input type="radio" id="louie"/>
+              <label for="louie">Louie</label>
+            </div>
+          </fieldset>
+    </li>
+
+    <li>
+      <label for="felicitation">Mensaje:</label>
+      <textarea id="felicitation"></textarea>
+    </li>
+
+
+
+  </ul>
+</form>
+
+
+</body>
+
+</html>
