@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'TremendaFuente';
+    src: url('../fonts/manga_txt.ttf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    font-family: 'TremendaFuente', sans-serif;
+    font-weight: 700;
+}
+body {
+    margin: 0;
+}
+header {
+    background-color: aqua;
+    height: 15vh;
+    margin: 0;
+}
+nav {
+    background-color:blueviolet;
+    height: 15vh;
+    margin: 0;
+}
+section {
+    background-color:tomato;    
+    height: 50vh;
+    margin: 0;
+    width: 70%;
+    float: left;
+}
+article {
+    background-color:rgb(57, 151, 161);    
+    margin: 0;
+    width: 50%;
+    float: left;
+    height: 90%;
+}
+article + article {
+    background-color:rgb(71, 255, 92);    
+    margin: 0;
+    width: 50%;
+    float: right;
+    height: 90%;
+}
+aside {
+    background-color:darkgoldenrod;
+    height: 50vh;
+    margin: 0;
+    width: 30%;
+    float: right;
+}
+footer {
+    background-color:rgb(54, 54, 54);
+    height: 20vh;
+    margin: 0;
+    float: left;
+    width: 100%;
+}
+

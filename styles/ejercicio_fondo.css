@@ -1,0 +1,15 @@
+* {
+    color: white;
+}
+
+article {
+    background-color: red;
+    border: 1px solid red;
+    height: 100vh;
+    background-image: url("../img/imagen.gif");
+}
+body {
+    margin: 0px;
+    background-color: blue;
+    height: 100%;
+}
