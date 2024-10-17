@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'TremendaFuente';
-    src: url('../fonts/manga_txt.ttf') format('woff2');
+    src: url('../../fonts/manga_txt.ttf') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
@@ -26,7 +26,7 @@ section {
     height: 50vh;
     margin: 0;
     width: 70%;
-    float: left;
+    float: right;
 }
 article {
     background-color:rgb(57, 151, 161);    
@@ -47,7 +47,7 @@ aside {
     height: 50vh;
     margin: 0;
     width: 30%;
-    float: right;
+    float: left;
 }
 footer {
     background-color:rgb(54, 54, 54);
@@ -55,5 +55,24 @@ footer {
     margin: 0;
     float: left;
     width: 100%;
+}
+
+/*Cuando es una tablet*/
+@media screen and (max-width: 1000px) {
+    article {
+        width: 100%;
+    }
+}
+
+/*Cuando es un móvil*/
+@media screen and (max-width: 600px) {
+    aside {
+        height: 10vh;
+        width: 100%;
+    }
+    section {
+        width: 100%;
+    }
+
 }
 

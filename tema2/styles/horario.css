@@ -1,3 +1,14 @@
+th {
+    background-color: black;
+    color: white;
+    font-style: italic;
+    text-decoration: overline;
+}
+
+tr {
+    text-decoration: underline;
+}
+
 .diw {
     background-color: #ffcccc;
 }
