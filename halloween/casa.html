@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa</title>
+    <link rel="stylesheet" href="casa.css">
+</head>
+<body>
+    <div class="izquierda">
+        <div class="boton">Púlsame</div>
+        <p>Harold</p> 
+    </div>
+    <div class="centro">
+        <div class="background"></div>
+
+        <div class="piso_abajo_aux"></div>
+        <img src="./recursos/backgrounds/piso_abajo.png" class="piso_abajo">
+        <img src="./recursos/backgrounds/piso_arriba.png" class="piso_arriba">
+        <img src="./recursos/backgrounds/suelo.png" class="suelo">
+        <img src="./recursos/backgrounds/lapida_derecha.png" class="lapida_derecha">
+        <img src="./recursos/backgrounds/lapida_izquierda.png" class="lapida_izquierda_aux">
+        <div class="lapida_izquierda"></div>
+        <img src="./recursos/backgrounds/luna.png" class="luna">
+        <img src="./recursos/backgrounds/ojo.png" class="ojo">
+        <img src="./recursos/backgrounds/pupila.png" class="pupila">
+        <img src="./recursos/backgrounds/puerta.png" class="puerta">
+        <img src="./recursos/img/escudo.png" class="escudo">
+
+        <img src="./recursos/img/calamardo.gif" class="calamardo">
+        <img src="./recursos/img/shigure.gif" class="shigure">
+        <img src="./recursos/backgrounds/discoteca.gif" class="discoteca">
+        <img src="./recursos/img/fight.gif" class="fight">
+        <img src="./recursos/img/zombie.gif" class="zombie">
+        <img src="./recursos/img/hu_tao.gif" class="hu_tao">
+        <img src="./recursos/img/titanes.gif" class="titanes">
+        <img src="./recursos/img/cat.gif" class="cat">
+        <img src="./recursos/img/meteorito.gif" class="meteorito">
+        <img src="./recursos/img/fuegos.gif" class="fuegos">
+
+        <audio class="escudo_audio" src="./recursos/audios/escudo.mp3" preload="auto"></audio>
+        <audio class="luna_audio" src="./recursos/audios/luna.mp3" preload="auto"></audio>
+        <audio class="piso_abajo_audio" src="./recursos/audios/piso_abajo.mp3" preload="auto"></audio>
+        <audio class="piso_arriba_audio" src="./recursos/audios/piso_arriba.mp3" preload="auto"></audio>
+        <audio class="lapida_izquierda_audio" src="./recursos/audios/zombie.mp3" preload="auto"></audio>
+        <audio class="lapida_derecha_audio" src="./recursos/audios/hu_tao.mp3" preload="auto"></audio>
+        <audio class="ojo_audio" src="./recursos/audios/ojo.mp3" preload="auto"></audio>
+        <audio class="pupila_audio" src="./recursos/audios/pupila.mp3" preload="auto"></audio>
+
+        <audio class="final_audio" src="./recursos/audios/final.mp3" preload="auto"></audio>
+      
+    </div>
+
+    <div class="derecha">
+        <p>de la Cruz</p>
+    </div>
+
+    <script>
+        const audios = document.querySelectorAll('audio');
+        const finalAudio = document.querySelector('.final_audio');
+
+        function stopAudios() {
+            audios.forEach(audio => {
+                audio.pause();
+                audio.currentTime = 0;
+            });
+        }
+    
+        function playAudio(elemento, audio) {
+            elemento.addEventListener('mouseover', () => {
+                stopAudios();
+                audio.play();
+            });
+            elemento.addEventListener('mouseleave', () => {
+                audio.pause();
+                audio.currentTime = 0;
+            });
+        }
+
+        playAudio(document.getElementsByClassName('escudo')[0], document.getElementsByClassName('escudo_audio')[0]);
+        playAudio(document.getElementsByClassName('luna')[0], document.getElementsByClassName('luna_audio')[0]);
+        playAudio(document.getElementsByClassName('piso_abajo')[0], document.getElementsByClassName('piso_abajo_audio')[0]);
+        playAudio(document.getElementsByClassName('piso_arriba')[0], document.getElementsByClassName('piso_arriba_audio')[0]);
+        playAudio(document.getElementsByClassName('lapida_izquierda')[0], document.getElementsByClassName('lapida_izquierda_audio')[0]);
+        playAudio(document.getElementsByClassName('lapida_derecha')[0], document.getElementsByClassName('lapida_derecha_audio')[0]);
+        playAudio(document.getElementsByClassName('ojo')[0], document.getElementsByClassName('ojo_audio')[0]);
+        playAudio(document.getElementsByClassName('pupila')[0], document.getElementsByClassName('pupila_audio')[0]);
+
+        const boton = document.querySelector('.boton');
+        const centro = document.querySelector('.centro');
+
+        boton.addEventListener('mouseover', () => {
+            stopAudios(); 
+            finalAudio.play();
+            centro.classList.add('hovered'); 
+        });
+
+        boton.addEventListener('mouseleave', () => {
+            finalAudio.pause(); 
+            finalAudio.currentTime = 0;
+            centro.classList.remove('hovered'); 
+        });
+    </script>
+</body>
+</html>

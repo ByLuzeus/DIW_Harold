@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#casa {
+    position: relative;
+    background-image: url('./img/casa.jpg');
+    background-repeat: no-repeat;
+    background-size: contain; /*Toma como principal el eje y*/
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+}
+#rail {
+    position: absolute;
+    width: 600px;
+    top: 100px;
+    left: 520px;
+}
+#puertaCompleta {
+    position: absolute;
+    width: 220px;
+    top: 120px;
+    left: 520px;
+    transition: transform ease-in-out 2s;
+}
+#puertaCompleta:hover {
+    transform: translateX(380px);
+}
+
+#puerta {
+    position: absolute;
+    width: 220px;
+    z-index: 0;
+}
+#enganche1, #enganche2{
+    position: absolute;
+    top: -15px;
+    width: 30px;
+    z-index: 1;
+}
+#enganche1 {
+    left: 20px;
+}
+#enganche2 {
+    right: 19px;
+}

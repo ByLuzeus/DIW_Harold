@@ -1,0 +1,366 @@
+/*
+recursos/
+      audios/
+          escudo.mp3
+          hu_tao.mp3
+          luna.mp3
+          piso_abajo.mp3
+          piso_arriba.mp3
+          zombie.mp3
+      backgrounds/ 
+          background.png
+          discoteca.gif
+          lapida_derecha.png
+          lapida_izquierda.png
+          luna.png
+          ojo.png
+          piso_abajo.png
+          piso_arriba.png
+          puerta.png
+          pupila.png
+          suelo.png
+      img/
+          calamardo.gif
+          escudo.png
+          fight.gif
+          hu_tao.gif
+          shigure.gif
+          titanes.gif
+          zombie.gif
+  casa.html
+  casa.css
+*/
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  background-color: grey;
+}
+.izquierda, .derecha {
+  width: 12vw; 
+  background-color: black;
+  color: orange;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+.centro {
+  flex-grow: 2;
+  position: relative;
+} 
+.background {
+  background-image: url('./recursos/backgrounds/background.png');
+  position: absolute;
+  background-color:#FFB41B;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover; 
+}
+/* --------------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------------*/
+.boton {
+  background-color: orange;
+  color: black;
+  font-weight: bold;
+  padding: 3%;
+  margin-top: -20%;
+  margin-bottom: 10%;
+  text-align: center;
+  font-size: 22px;
+  z-index: 5;
+}
+/* --------------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------------*/
+.piso_arriba {
+  position: absolute;
+  top: 21.1%;
+  left: 0%;
+  width: 38.9%;
+  z-index: 4;
+}
+.piso_arriba:hover ~ .discoteca,
+.centro.hovered .piso_arriba ~ .discoteca {
+  opacity: 0.5;
+  transition: opacity 0.5s ease;
+}
+
+.piso_arriba:hover ~ .calamardo,
+.centro.hovered .piso_arriba ~ .calamardo {
+  opacity: 1;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.piso_arriba:hover ~ .shigure,
+.centro.hovered .piso_arriba ~ .shigure {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+/* --------------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------------*/
+.piso_abajo {
+  position: absolute;
+  top: 66.5%;
+  left: 0%;
+  width: 34.5%;
+  z-index: 4;
+}
+.piso_abajo_aux {
+  position: absolute;
+  background-color:black;
+  bottom: 0;
+  left: 0;
+  width: 30%;
+  height: 35%;
+  z-index: 1;
+  opacity: 1;
+}
+.piso_abajo:hover ~ .fight,
+.centro.hovered .piso_abajo ~ .fight {
+  opacity: 1;
+  transform: translateX(70%); 
+  transition: opacity 0.5s ease, transform 10s ease-in-out;
+}
+.piso_abajo:hover ~ .puerta,
+.centro.hovered .piso_abajo ~ .puerta {
+  opacity: 0; 
+  transition: opacity 1s ease;
+}
+/* --------------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------------*/
+.suelo {
+  position: absolute;
+  left: 0%;
+  bottom: 0%;
+  height: 100%;
+  z-index: 3;
+}
+/* --------------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------------*/
+.lapida_izquierda {
+  position: absolute;
+  bottom: 7%;
+  left: 39.4%;
+  width: 8%;
+  height: 15%;
+  z-index: 4;
+}
+.lapida_izquierda:hover ~ .zombie,
+.centro.hovered .lapida_izquierda ~ .zombie {
+  opacity: 1;
+  transform: translateY(-90%);
+  transition: opacity 0s ease, transform 15s ease;
+}
+.lapida_izquierda_aux {
+  position: absolute;
+  bottom: 9%;
+  left: 40%;
+  width: 7%;
+  height: 12%;
+  z-index: 2;
+}
+/* --------------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------------*/
+.lapida_derecha {
+  position: absolute;
+  bottom: 7%;
+  left: 53.5%;
+  width: 6%;
+  z-index: 3;
+}
+.lapida_derecha:hover ~ .hu_tao,
+.centro.hovered .lapida_derecha ~ .hu_tao {
+  animation: volar 15s linear infinite;
+  opacity: 0.5;
+  transition: opacity 1s ease;
+}
+@keyframes volar {
+  0% { transform: translate(0, 0); }
+  10% { transform: translate(-500%, -200%); }
+  20% { transform: translate(300%, 0); }
+  30% { transform: translate(400%, -700%); }
+  40% { transform: translate(-100%, -800%); }
+  50% { transform: translate(-400%, -500%); }
+  60% { transform: translate(-200%, -300%); }
+  70% { transform: translate(0, -200%); }
+  80% { transform: translate(-300%, 0); }
+  90% { transform: translate(400%, -600%); }
+  100% { transform: translate(0, 0); }
+}
+
+/* --------------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------------*/
+.luna {
+  position: absolute;
+  top: 8%;
+  left: 45%;
+  width: 10%;
+  z-index:3;
+  transition: transform 25s ease-in-out;
+}
+.luna:hover,
+.centro.hovered .luna {
+  transform: rotate(100000deg) scale(1.5);
+}
+/* --------------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------------*/
+.ojo {
+  position: absolute;
+  bottom: 3%;
+  left: 22%;
+  width: 5%;
+  z-index: 3;
+}
+.ojo:hover,
+.centro.hovered .ojo {
+  transform: translateX(1000%) rotate(1000deg);
+  transition: transform 10s ease;
+}
+/* --------------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------------*/
+.pupila {
+  position: absolute;
+  bottom: 12%;
+  right: 8.7%;
+  height: 3.3%;
+  z-index: 3; 
+}
+.pupila:hover,
+.centro.hovered .pupila {
+  transform: scale(4.7);
+  transition: transform 15s ease-in-out;
+}
+/* --------------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------------*/
+.escudo {
+  position: absolute; 
+  top: 2%;       
+  right: 2%;       
+  width: 9%;         
+  opacity: 1;      
+  z-index: 4;        
+}
+.escudo:hover ~ .titanes,
+.centro.hovered .escudo ~ .titanes {
+  opacity: 1;
+  left: 30%;
+  transition: opacity 0s ease, left 6s ease;
+}
+/* --------------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------------*/
+.puerta {
+  position: absolute;
+  bottom: 13%;
+  left: 15.2%;
+  height: 15.2%;
+  opacity: 1;     
+  z-index: 2; 
+}
+/* --------------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------------*/
+.calamardo {
+  position: absolute; 
+  top: 31%;       
+  left: 6%;       
+  width: 5.5%;         
+  opacity: 0;      
+  z-index: 2;        
+}
+.shigure {
+  position: absolute; 
+  top: 50%;       
+  left: 9%;       
+  width: 10%;         
+  opacity: 0;      
+  z-index: 1;        
+}
+.discoteca {
+  position: absolute; 
+  top: 28%;       
+  left: 0%;       
+  width: 28%;         
+  opacity: 0;      
+  z-index: 1;       
+}
+.fight {
+  position: absolute; 
+  bottom: 9%;       
+  left: 0%;       
+  width: 17%;         
+  opacity: 0;      
+  z-index: 1;        
+}
+.zombie {
+  position: absolute; 
+  bottom: -4%;        
+  left: 41%;       
+  width: 6%;         
+  opacity: 0;      
+  z-index: 2;        
+}
+.hu_tao {
+  position: absolute; 
+  bottom: 14%;        
+  left: 52%;       
+  width: 8%;         
+  opacity: 0;      
+  z-index: 3;        
+}
+.titanes {
+  position: absolute;
+  bottom: -3.2%;
+  left: 0%;
+  width: 50%;
+  opacity: 0; 
+  z-index: 1;
+}
+/* --------------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------------*/
+.cat {
+  position: absolute;
+  top: 1%;
+  left: -45%;
+  width: 30%;
+  opacity: 1; 
+  z-index: 4;
+}
+.centro.hovered .cat {
+  transform: translateX(540%);
+  transition: transform 45s ease;
+}
+
+.meteorito {
+  position: absolute;
+  top: -40%;
+  right: 0%;
+  width: 20%;
+  opacity: 1; 
+  z-index: 0;
+}
+.centro.hovered .meteorito {
+  transform: translate(-350%, 360%);
+  transition:transform 15s ease;
+}
+
+.fuegos {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  width: 100%;
+  opacity: 0; 
+  z-index: 0;
+}
+.centro.hovered .fuegos {
+  opacity: 0.6;
+  transition:opacity 10s ease;
+}
