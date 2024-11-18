@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coches</title>
+    <link rel="stylesheet" href="coche.css">
+</head>
+<body>
+    <div class="fondo animacion">
+        <img src="./recursos/play.png" class="play">
+        <audio class="a_tokyo" src="./recursos/audios/tokyo.mp3" preload="auto"></audio>
+        <audio class="a_r34" src="./recursos/audios/r34.mp3" preload="auto"></audio>
+        <audio class="a_mazda" src="./recursos/audios/mazda.mp3" preload="auto"></audio>
+        <audio class="a_carrera" src="./recursos/audios/carrera.mp3" preload="auto"></audio>
+        <audio class="a_kerosene" src="./recursos/audios/kerosene.mp3" preload="auto"></audio>
+        <audio class="a_improperio" src="./recursos/audios/improperio.mp3" preload="auto"></audio>
+        <audio class="a_explosion" src="./recursos/audios/explosion.mp3" preload="auto"></audio>
+        <audio class="a_siente_el_boom" src="./recursos/audios/siente_el_boom.mp3" preload="auto"></audio>
+
+        <div class="suelo"></div>
+
+        <img class="supra animacion" src="recursos/coche/coche.png">
+        <img class="mazda animacion" src="recursos/coche/mazda.png">
+
+
+
+        
+        <img class="edificio_i animacion" src="recursos/edificio.png">
+
+
+
+
+
+
+
+        
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const audioTokyo = document.querySelector('.a_tokyo');
+            const audioKerosene = document.querySelector('.a_kerosene');
+            const audioMazda = document.querySelector('.a_mazda');
+            const audioR34 = document.querySelector('.a_r34');
+            const audioCarrera = document.querySelector('.a_carrera');
+            const audioImproperio = document.querySelector('.a_improperio');
+            const audioExplosion = document.querySelector('.a_explosion');
+            const audioSienteElBoom = document.querySelector('.a_siente_el_boom');
+
+            const boton = document.querySelector('.play');
+
+            const elementosAnimados = document.querySelectorAll('.animacion');
+
+            const programarAudios = () => {
+                audioTokyo.play();
+
+                audioTokyo.addEventListener('ended', () => {
+                    audioKerosene.play();
+                    audioImproperio.play();
+                });
+                setTimeout(() => {
+                    audioMazda.play();
+                    audioR34.play();
+                }, 43000);
+
+                setTimeout(() => {
+                    audioCarrera.play();
+                }, 63000);
+
+                setTimeout(() => {
+                    audioSienteElBoom.play();
+                }, 99000);
+                setTimeout(() => {
+                    audioExplosion.play();
+                }, 104000);  
+            };
+            boton.addEventListener('click', () => {
+                elementosAnimados.forEach((elemento) => {
+                    elemento.style.animationPlayState = 'running';
+                });
+                programarAudios();
+                boton.classList.add('hidden'); 
+            });
+        });
+    </script>
+</body>
+
+</html>

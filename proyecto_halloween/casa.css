@@ -1,35 +1,3 @@
-/*
-recursos/
-      audios/
-          escudo.mp3
-          hu_tao.mp3
-          luna.mp3
-          piso_abajo.mp3
-          piso_arriba.mp3
-          zombie.mp3
-      backgrounds/ 
-          background.png
-          discoteca.gif
-          lapida_derecha.png
-          lapida_izquierda.png
-          luna.png
-          ojo.png
-          piso_abajo.png
-          piso_arriba.png
-          puerta.png
-          pupila.png
-          suelo.png
-      img/
-          calamardo.gif
-          escudo.png
-          fight.gif
-          hu_tao.gif
-          shigure.gif
-          titanes.gif
-          zombie.gif
-  casa.html
-  casa.css
-*/
 body {
   margin: 0;
   padding: 0;
@@ -38,6 +6,13 @@ body {
   overflow: hidden;
   background-color: grey;
 }
+/* 
+ width
+ - en mi portatil --> 12
+ - en otro con 16:9 1080p con barra windows--> 14.3
+ - en otro con 16:9 4K con barra windows --> 12.3
+
+*/
 .izquierda, .derecha {
   width: 12vw; 
   background-color: black;
@@ -49,7 +24,7 @@ body {
   writing-mode: vertical-rl;
   text-orientation: upright;
 }
-.centro {
+.centro {  
   flex-grow: 2;
   position: relative;
 } 

@@ -1,0 +1,170 @@
+/*
+    /recursos
+        /audios 
+            carrera.mp3
+            explosion.mp3
+            improperio.mp3
+            kerosene.mp3
+            mazda.mp3
+            r34.mp3
+            siente_el_boom.mp3
+            tokyo.mp3
+        /coche
+            coche_destrozado.png
+            coche_sin_puerta.png
+            coche_sin_ruedas.png
+            coche.png
+            faro.png
+            interior.png
+            mazda.png
+            puerta.png
+            rueda.png
+        /efectos
+            explosion1.gif
+            explosion2.gif
+            humo.gif
+            llama.gif
+            meteorito.gif
+        cielo.png
+        dick.gif
+        edificio.png
+        ladrillo.png
+        muro_destruido.png
+        muro.png
+        nube.png
+        pajaro1.png
+        pajaro2.png
+        play.png
+    coche.css
+    coche.html
+*/
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.suelo {
+    position: absolute;
+    background-color: rgb(0, 86, 42);
+    margin: 0;
+    width: 100%;
+    height: 33%;
+    bottom: 0;
+    
+}
+.fondo {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: #91D9F1;
+    display: flex;
+    background-image: url('recursos/cielo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: sol 120s linear forwards paused;
+}
+@keyframes sol {
+    0.1% { background-color: #d90094;}
+    5% {background-color: #379c00;}
+    10% {background-color: #0037ff;}
+    15% {background-color: #00c3ff;}
+    20% {background-color: #FFD700;}
+    25% {background-color: #ff6a00;}
+    30% {background-color: #00ff2f;}
+    35.83% {background-color: #cb0000;}
+    48.82% {background-color: #cb0000;}
+    48.83% {background-color: #fff700;}
+    52.49% {background-color: #fff700;}
+    52.5% {background-color: #00cb2f;}
+    100% {background-color: #00cb2f;}
+}
+.play {
+    position: absolute;
+    top: 2%;
+    right: 1%;
+    width: 5%;
+    cursor: pointer;
+    z-index: 2;
+}
+.play.hidden {
+    display: none;
+}
+/* --------------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------------*/
+.supra {
+    position: absolute;
+    width: 23%;
+    bottom: 15%;
+    left: -22%;
+    z-index: 1;
+    animation: supra 120s linear forwards paused;
+}
+@keyframes supra {
+    35.83% {left: 0%;}
+    52.5% {left: 0%;}
+
+
+
+
+
+
+
+    
+
+    77.5% {
+        bottom: 10%;
+        left: 25%;
+    }
+
+
+
+
+    100% { left: 100%; } 
+}
+.mazda {
+    position: absolute;
+    width: 22.2%;
+    bottom: 4%;
+    left: -22%;
+    z-index: 1;
+    animation: mazda 120s linear forwards paused;
+}
+@keyframes mazda {
+    35.83% {left: 0%;}
+    52.5% {left: 0%;}
+
+
+
+
+
+
+
+
+    74.5% {bottom: 4%;}
+    75% {
+        left: 22%;
+        bottom: -10%;
+    }
+    77.5% {left: 300%;}
+    100% { 
+        left: 300%; 
+        bottom: -10%;
+    } 
+}
+/* --------------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------------*/
+.edificio_i{
+    position: absolute;
+    width: 30%;
+    bottom: 15%;
+    right: 0%;
+    z-index: 1;
+    opacity: 0;
+}
+
+
+
+/* --------------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------------*/
+
+
