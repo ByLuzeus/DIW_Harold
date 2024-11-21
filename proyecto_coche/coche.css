@@ -48,7 +48,7 @@ body {
     background-color: rgb(0, 86, 42);
     margin: 0;
     width: 100%;
-    height: 33%;
+    height: 30%;
     bottom: 0;
     
 }
@@ -84,7 +84,7 @@ body {
     right: 1%;
     width: 5%;
     cursor: pointer;
-    z-index: 4;
+    z-index: 10;
 }
 .play.hidden {
     display: none;
@@ -94,14 +94,17 @@ body {
 .supra {
     position: absolute;
     width: 23%;
-    bottom: 15%;
+    bottom: 18%;
     left: -22%;
-    z-index: 1;
+    z-index: 2;
     animation: supra 120s linear forwards paused;
 }
 @keyframes supra {
     35.83% {left: 0%;}
-    52.5% {left: 0%;}
+    52.5% {
+        bottom: 18%;
+        left: 0%;
+    }
     53.5% {left: 35%;}
     55% {left: 45%;}
     57.5% {left: 60%;}
@@ -116,17 +119,12 @@ body {
         bottom: 10%;
         left: 25%;
     }
-
-
-
-
-
-
-
-
-
+    84.16% {
+        bottom: 10%;
+        left: 35%;
+    }
     100% { 
-        left: 100%; 
+        left: 35%; 
         bottom: 10%;
     } 
 }
@@ -135,7 +133,7 @@ body {
     width: 22.2%;
     bottom: 4%;
     left: -22%;
-    z-index: 1;
+    z-index: 3;
     animation: mazda 120s linear forwards paused;
 }
 @keyframes mazda {
@@ -165,26 +163,217 @@ body {
 /* --------------------------------------------------------------------------------*/
 /* --------------------------------------------------------------------------------*/
 .nube11 {
-    position: absolute;
-    width: 22.2%;
-    top: 4%;
-    left: -10%;
-    z-index: 0;
-    opacity: 0.7;
-    animation: nube 120s linear forwards paused;
+    position: absolute;width: 22.2%;top: 4%;left: -10%;z-index: 0;opacity: 0.6;animation: nube 120s linear forwards paused;
 }
 .nube12 {
-    position: absolute;
-    width: 35;
-    top: 30%;
-    left: 20%;
-    z-index: 0;
-    opacity: 0.7;
-    animation: nube 120s linear forwards paused;
+    position: absolute;width: 35%;top: 30%;left: 20%;z-index: 0;opacity: 0.6;animation: nube 120s linear forwards paused;
 }
+.nube13 {
+    position: absolute;width: 15%;top: 10%;left: 60%;z-index: 0;opacity: 0.5;animation: nube 120s linear forwards paused;
+}
+.nube14 {
+    position: absolute;width: 35%;top: 40%;left: 80%;z-index: 0;opacity: 0.4;animation: nube 120s linear forwards paused;
+}
+.nube15 {
+    position: absolute;width: 23%;top: 40%;left: -35%;z-index: 0;opacity: 0.5;animation: nube 120s linear forwards paused;
+}
+
 @keyframes nube {
- 
-    10% { transform: translateX(100vw); } 
+    52.5% { transform: translateX(45vw); } 
+    55% { transform: translateX(40vw); } 
+    56.5% { transform: translateX(30vw); } 
+    58% { transform: translateX(15vw); } 
+    59.5% { transform: translateX(0vw); } 
+    61% { transform: translateX(-20vw); } 
+    62% { transform: translateX(-32vw); } 
+    63% { transform: translateX(-50vw); } 
+    64% { transform: translateX(-65vw); } 
+    65% { transform: translateX(-90vw); } 
+    66% { transform: translateX(-112vw); } 
+    67% { transform: translateX(-140vw); } 
+    68% { transform: translateX(-165vw); } 
+    69% { transform: translateX(-200vw); } 
+    70% { transform: translateX(-230vw); } 
+    71% { transform: translateX(-270vw); } 
+    72% { transform: translateX(-300vw); } 
+    73% { transform: translateX(-350vw); } 
+    74% { transform: translateX(-382vw); } 
+    75% { transform: translateX(-428vw); } 
+    76% { transform: translateX(-430vw); } 
+    77.5% { transform: translateX(-435vw); } 
+    100% { transform: translateX(-390vw); } 
+}
+.nube21 {
+    position: absolute;width: 13%;top: 8%;left: 110%;z-index: 0;opacity: 0.5;animation: nube 120s linear forwards paused;
+}
+.nube22 {
+    position: absolute;width: 25%;top: 22%;left: 135%;z-index: 0;opacity: 0.4;animation: nube 120s linear forwards paused;
+}
+.nube23 {
+    position: absolute;width: 19%;top: 10%;left: 150%;z-index: 0;opacity: 0.6;animation: nube 120s linear forwards paused;
+}
+.nube24 {
+    position: absolute;width: 31%;top: 33%;left: 180%;z-index: 0;opacity: 0.6;animation: nube 120s linear forwards paused;
+}
+.nube25 {
+    position: absolute;width: 28%;top: 15%;left: 205%;z-index: 0;opacity: 0.4;animation: nube 120s linear forwards paused;
+}
+.nube26 {
+    position: absolute;width: 19%;top: 28%;left: 220%;z-index: 0;opacity: 0.5;animation: nube 120s linear forwards paused;
+}
+.nube27 {
+    position: absolute;width: 21%;top: 4%;left: 245%;z-index: 0;opacity: 0.4;animation: nube 120s linear forwards paused;
+}
+.nube28 {
+    position: absolute;width: 29%;top: 37%;left: 270%;z-index: 0;opacity: 0.5;animation: nube 120s linear forwards paused;
+}
+.nube29 {
+    position: absolute;width: 20%;top: 25%;left: 295%;z-index: 0;opacity: 0.6;animation: nube 120s linear forwards paused;
+}
+
+.nube31 {
+    position: absolute;width: 19%;top: 32%;left: 310%;z-index: 0;opacity: 0.5;animation: nube 120s linear forwards paused;
+}
+.nube32{
+    position: absolute;width: 21%;top: 15%;left: 340%;z-index: 0;opacity: 0.4;animation: nube 120s linear forwards paused;
+}
+.nube33 {
+    position: absolute;width: 9%;top: 29%;left: 365%;z-index: 0;opacity: 0.6;animation: nube 120s linear forwards paused;
+}
+.nube34 {
+    position: absolute;width: 23%;top: 7%;left: 380%;z-index: 0;opacity: 0.6;animation: nube 120s linear forwards paused;
+}
+.nube35 {
+    position: absolute;width: 18%;top: 30%;left: 405%;z-index: 0;opacity: 0.4;animation: nube 120s linear forwards paused;
+}
+.nube36 {
+    position: absolute;width: 32%;top: 13%;left: 430%;z-index: 0;opacity: 0.5;animation: nube 120s linear forwards paused;
+}
+.nube37 {
+    position: absolute;width: 21%;top: 22%;left: 460%;z-index: 0;opacity: 0.5;animation: nube 120s linear forwards paused;
+}
+.nube38 {
+    position: absolute;width: 27%;top: 17%;left: 480%;z-index: 0;opacity: 0.4;animation: nube 120s linear forwards paused;
+}
+.nube39 {
+    position: absolute;width: 18%;top: 32%;left: 505%;z-index: 0;opacity: 0.5;animation: nube 120s linear forwards paused;
+}
+/* --------------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------------*/
+.muro {
+    position: absolute;
+    width: 20%;
+    bottom: 7%;
+    right: -20%;
+    z-index: 1;
+    opacity: 1;
+    animation: muro 120s linear forwards paused;
+}
+@keyframes muro {
+    76.5% {
+        right: -20%; 
+    }
+    77.5% {
+        right: 42%;
+        opacity: 1;
+    }
+    77.51% {
+        opacity: 0;
+    }
+    100% { opacity: 0;}
+}
+
+.muro_i {
+    position: absolute;
+    width: 20%;
+    bottom: 7%;
+    right: 42%;
+    z-index: 0;
+    opacity: 0;
+    animation: muro2 120s linear forwards paused;
+}
+.muro_d {
+    position: absolute;
+    width: 20%;
+    bottom: 7%;
+    right: 42%;
+    z-index: 3;
+    opacity: 0;
+    animation: muro2 120s linear forwards paused;
+}
+@keyframes muro2 {
+    77.5% {opacity: 0;}
+    77.51% {
+        opacity: 1;
+        right: 42%;
+    }
+
+    84.16% {
+        right:110%;
+    }
+    100% { 
+        opacity: 1;
+        right:110%;
+    }
+}
+
+.ladrillo1 {
+    position: absolute;
+    width: 6%;
+    bottom: 50%;
+    right: 65%;
+    z-index: 3;
+    opacity: 0;
+    animation: ladrillo 1s linear infinite paused, ladrillo2 120s linear forwards paused;
+}
+.ladrillo2 {
+    position: absolute;
+    width: 6%;
+    bottom: 47%;
+    right: 60%;
+    z-index: 3;
+    opacity: 0;
+    animation: ladrillo 1s linear infinite paused, ladrillo2 120s linear forwards paused;
+}
+.ladrillo3 {
+    position: absolute;
+    width: 6%;
+    bottom: 40%;
+    right: 38%;
+    z-index: 3;
+    opacity: 0;
+    animation: ladrillo 1s linear infinite paused, ladrillo2 120s linear forwards paused;
+}
+.ladrillo4 {
+    position: absolute;
+    width: 6%;
+    bottom: 35%;
+    right: 33%;
+  
+    z-index: 3;
+    opacity: 1;
+    animation: ladrillo 1s linear infinite paused, ladrillo2 10s linear forwards paused;
+}
+@keyframes ladrillo {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(600%) rotate(1000deg); }
+    100% { transform: translateY(0) rotate(2000deg); }
+}
+@keyframes ladrillo2 {
+    77.5% {opacity: 1;}
+    77.51% { 
+        opacity: 1; 
+        transform: translateX(0)
+       
+    }
+    84.16% {
+        transform: translateX(-20);
+        opacity: 1; 
+    }
+    84.17% {
+    
+        opacity: 1;  
+    }
 }
 
 
@@ -193,9 +382,6 @@ body {
 
 
 
-
-/* --------------------------------------------------------------------------------*/
-/* --------------------------------------------------------------------------------*/
 .edificio_i{
     position: absolute;
     width: 30%;
