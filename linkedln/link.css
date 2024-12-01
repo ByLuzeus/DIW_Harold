@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+/*---------------------------------------------------------*/
+header {
+    margin: 0;
+    width: 100%;
+    height: 17vh;
+    border: solid black 1px;
+    position: relative;
+}
+.logo_texto {
+    position: absolute;
+    bottom: 50%;
+    width: 10%;
+}
+.nav_bar {
+    display: flex;
+    position: absolute;
+    height: 60%;
+    top: 20%;
+    left: 23%;
+}
+
+.bar_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 9%;
+    height: 100%;
+    margin-right: 0.5%;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.bar_item img {
+    width: 40%;
+    opacity: 0.5;
+}
+
+.bar_item p {
+    font-size: 105%;
+    margin-top: 1%;
+    text-align: center;
+    opacity: 0.5;
+}
+
+.bar_item:hover img {
+    transition: opacity 0.5s ease;
+    opacity: 1;
+}
+
+.bar_item:hover p {
+    opacity: 1;
+    transform: scale(1.2);
+    text-decoration: underline;
+    transition: all 0.3s ease;
+}
+/*---------------------------------------------------------*/
+.main {
+    margin: 0;
+    display: flex;
+    width: 100%;
+    height: 83vh;
+    box-sizing: border-box;
+}
+
+.presentacion {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.portada {
+    margin: 0;
+    width: 100%;
+    height: 33vh;
+    border: solid black 1px;
+}
+
+.contenido {
+    margin: 0;
+    display: flex;
+    width: 100%;
+    height: 50vh;
+    box-sizing: border-box;
+}
+
+.izquierda {
+    margin: 0;
+    width: 65%;
+    height: 100%;
+    border: solid black 1px;
+}
+
+.derecha {
+    margin: 0;
+    width: 35%;
+    height: 100%;
+    border: solid black 1px;
+}
+
+aside {
+    width: 35%;
+    height: 100%;
+    box-sizing: border-box;
+    border: solid black 1px;
+}

@@ -1,0 +1,354 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: black;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+.sonido {
+    position: absolute;
+    top: 3vh;
+    left: 1vw;
+    width: 6vw;
+    z-index: 10;
+    cursor: pointer; 
+}
+/* --------------------------------------------------------------------------------*/
+.cabina {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: 10;
+}
+/* --------------------------------------------------------------------------------*/
+.espacio {
+    position: absolute;
+    top: -50vh;
+    left: -50vw;
+    width: 200vw;
+    height: 200vh;
+    z-index: 0;
+    background-color: black;
+    transition: transform 5s ease;
+    overflow: hidden;
+}
+.estrellas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 5s;
+}
+.viaje {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; 
+    transition: opacity 5s ease;
+    z-index: 1;
+    object-fit: cover;
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.estrellas.rotate {
+    animation: rotate 0.1s linear infinite;
+}
+/* --------------------------------------------------------------------------------*/
+.div_planeta {
+    position: relative;
+    top: 30%;
+    left: 40%; 
+    width: 10vw;
+    height: 20vh; 
+    z-index: 5;
+    animation: div_planeta 120s forwards;
+}
+@keyframes div_planeta {
+    100% {
+        left: 10%; 
+        top: 10%;
+        width: 50vw;
+        height: 100vh;
+    }
+}
+.planeta1 {
+    width: 80%; 
+    z-index: 5; 
+}
+.satelite {
+    position: absolute;
+    width: 30%;
+    z-index: 1; 
+    top: 25%;
+    left: 90%; 
+    animation: orbitar 8s infinite linear;
+}
+@keyframes orbitar {
+    0% {
+        left: 90%; 
+        z-index:-1;
+    }
+    49.9% {
+        left: -40%; 
+        z-index: -1;
+    }
+    50.1% {
+        left: -40%; 
+        z-index: 1;
+    }
+    100% {
+        left: 90%; 
+        z-index: 1;
+    }
+}
+.planeta2 {
+    position: absolute;
+    z-index: 7; 
+    width: 12vw;  
+    top: 50%;
+    left: 70%;
+    animation: planeta2 20s infinite linear, moverPlaneta2 120s forwards;
+}
+
+@keyframes planeta2 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes moverPlaneta2 {
+    100% {
+        width: 120vw; 
+        top: 45%;
+        left: 50%;
+    }
+}
+/* --------------------------------------------------------------------------------*/
+@keyframes rotarAsteroide {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.asteroide1 {
+    position: absolute;
+    z-index: 9; 
+    width: 6vw;  
+    top: 60%;
+    left: 10%;
+    animation: rotarAsteroide 4s infinite linear, asteroide1 120s forwards;
+}
+@keyframes asteroide1 {
+    75% {
+        top: -20%;
+        left: 100%;
+        width: 120vw;
+    }
+    100% {
+        top: -20%;
+        left: 100%;
+        width: 120vw;
+    }
+}
+.asteroide2 {
+    position: absolute;
+    z-index: 4; 
+    width: 4vw;  
+    top: 15%;
+    left: 15%;
+    animation: rotarAsteroide 4s infinite linear, asteroide2 120s forwards;
+}
+@keyframes asteroide2 {
+    100% {
+        left: 80%;
+        top: 40%;
+        width: 12vw;
+    }
+}
+
+.asteroide3 {
+    position: absolute;
+    z-index: 6; 
+    width: 5vw;  
+    top: 70%;
+    right: 10%;
+    animation: rotarAsteroide 4s infinite linear, asteroide3 120s forwards;
+}
+@keyframes asteroide3 {
+    85% {
+        right: 100%;
+        top: 20%;
+        width: 40vw;
+    }
+    100% {
+        right: 100%;
+        top: 20%;
+        width: 40vw;
+    }
+}
+/* --------------------------------------------------------------------------------*/
+.nave1, .nave2 {
+    position: absolute;
+    width: 8vw;
+    z-index: 8;
+    top:50%;
+    left: 20%;
+    animation: nave 25s linear infinite;
+}
+.nave2 {
+    animation-delay: 0.5s;
+}
+@keyframes nave {
+    2% {transform: rotate(0);}
+    3% {
+        top: 20%;
+        left: 20%;
+        transform: rotate(90deg);  
+    }
+    11% {transform: rotate(90deg);}
+    12% {
+        top: 20%;
+        left: 90%;
+        transform: rotate(180deg);  
+    }
+    19% {transform: rotate(180deg);}
+    20% {
+        top: 75%;
+        left: 90%;
+        transform: rotate(300deg);
+    }
+    27% {transform: rotate(300deg);}
+    28% {
+        top: 40%;
+        left: 50%;
+        transform: rotate(270deg);
+    }
+    34% {transform: rotate(270deg);}
+    35% {
+        top: 40%;
+        left: 10%;
+        transform: rotate(180deg);
+    }
+    41% {transform: rotate(180deg);}
+    42% {
+        top: 70%;
+        left: 10%;
+        transform: rotate(60deg);
+    }
+    52% { transform: rotate(60deg);}
+    53% {
+        top: 10%;
+        left: 90%;
+        transform: rotate(250deg);
+    }
+    60% { transform: rotate(250deg);}
+    61% {
+        top: 30%;
+        left: 30%;
+        transform: rotate(135deg);
+    }
+    69% { transform: rotate(135deg);}
+    70% {
+        top: 70%;
+        left: 70%;
+        transform: rotate(60deg);
+    }
+    76% { transform: rotate(60deg);}
+    77% {
+        top:45%;
+        left: 90%;
+        transform: rotate(300deg);
+    }
+    84% { transform: rotate(300deg);}
+    85% {
+        top:5%;
+        left: 50%;
+        transform: rotate(180deg);
+    }
+    93% { transform: rotate(180deg);}
+    94% {
+        top:70%;
+        left: 50%;
+        transform: rotate(310deg);
+    }
+    99% { transform: rotate(310deg);}
+    100% {
+        top: 50%;
+        left: 20%;
+    }
+}
+.misil {
+    position: absolute;
+    width: 15vw;
+    z-index: 8;
+    top:62%;
+    left: 80%;
+    transform: rotate(300deg); 
+    animation: misil 25s linear infinite; 
+    opacity: 0;
+}
+
+@keyframes misil {
+    25.9% {
+        top:62%;
+        left: 80%;
+        opacity: 0;
+    }
+    26% {
+        top:62%;
+        left: 80%;
+        opacity: 1;
+    }
+    35% {
+        top: -40vh;
+        left: -20vw;
+        opacity: 1;
+    }
+    100% {
+        top: -40vh;
+        left: -20vw;
+        opacity: 0;
+    }
+}
+/* --------------------------------------------------------------------------------*/
+.grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    z-index: 10;
+}
+.zona {
+    background: white;
+    opacity: 0;
+}
+.zona:hover {
+    opacity: 0.1;
+}
+.boton {
+    position: absolute;
+    top: 88vh;
+    left: 65vw;
+    width: 6vw;
+    z-index: 10;
+    cursor: pointer; 
+}

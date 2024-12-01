@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'TremendaFuente';
-    src: url('../../fonts/manga_txt.ttf') format('woff2');
+    src: url('../fonts/manga_txt.ttf') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
@@ -56,23 +56,3 @@ footer {
     float: left;
     width: 100%;
 }
-
-/*Cuando es una tablet*/
-@media screen and (max-width: 1000px) {
-    article {
-        width: 100%;
-    }
-}
-
-/*Cuando es un móvil*/
-@media screen and (max-width: 600px) {
-    aside {
-        height: 10vh;
-        width: 100%;
-    }
-    section {
-        width: 100%;
-    }
-
-}
-

@@ -7,9 +7,9 @@ body {
     position: relative;
     background-image: url('./img/casa.jpg');
     background-repeat: no-repeat;
-    background-size: contain; /*Toma como principal el eje y*/
+    background-size: contain; 
     background-position: center;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     margin: 0 auto;
 }
@@ -24,7 +24,7 @@ body {
     width: 220px;
     top: 120px;
     left: 520px;
-    transition: transform ease-in-out 2s;
+    transition: transform ease 2s;
 }
 #puertaCompleta:hover {
     transform: translateX(380px);

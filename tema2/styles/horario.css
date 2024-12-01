@@ -4,7 +4,6 @@ th {
     font-style: italic;
     text-decoration: overline;
 }
-
 tr {
     text-decoration: underline;
 }
@@ -12,19 +11,15 @@ tr {
 .diw {
     background-color: #ffcccc;
 }
-
 .dwes {
     background-color: #ccffcc;
 }
-
 .dwec {
     background-color: #ccccff;
 }
-
 .des {
     background-color: #ffffcc;
 }
-
 .emp {
     background-color: #ffccff;
 }

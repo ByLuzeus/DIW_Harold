@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartas</title>
+    <link rel="stylesheet" href="cartas.css">
+</head>
+<body>
+
+    <div class="fila1">
+        <div class="carta c1">
+            <div class="anverso"></div>
+            <div class="reverso"></div>
+        </div>
+        <div class="carta c2">
+            <div class="anverso"></div>
+            <div class="reverso"></div>
+        </div>
+        <div class="carta c3">
+            <div class="anverso"></div>
+            <div class="reverso"></div>
+        </div>
+        <div class="carta c4">
+            <div class="anverso"></div>
+            <div class="reverso"></div>
+        </div>
+    </div>
+
+    <div class="fila2">
+
+        <div class="carta c5">
+            <div class="anverso"></div>
+            <div class="reverso"></div>
+        </div>
+        <div class="carta c6">
+            <div class="anverso"></div>
+            <div class="reverso"></div>
+        </div>
+        <div class="carta c7">
+            <div class="anverso"></div>
+            <div class="reverso"></div>
+        </div>
+        <div class="carta c8">
+            <div class="anverso"></div>
+            <div class="reverso"></div>
+        </div>
+    
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let cartas = document.querySelectorAll(".carta");
+            let pulsaciones = 0;    
+            let carta1 ='';
+            let carta2 ='';
+
+
+            cartas.forEach(carta => {
+                carta.addEventListener("click", function() {
+                    if (!carta.classList.contains("selected")) {
+                        carta.classList.toggle("selected"); 
+                        pulsaciones ++;
+
+                        if (pulsaciones % 2 != 0) {
+                            carta1 = carta.classList
+
+                        }
+
+                        if (pulsaciones % 2 == 0) {
+                            if (carta1 == carta2) {
+
+                            }
+
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+
+
+
+</html>

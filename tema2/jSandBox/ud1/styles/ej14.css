@@ -8,10 +8,13 @@ body {
 }
 #header {
     justify-content: space-between;
+   
     display: flex;
 }
+
 #header h2{
     color: #a3a3a3;
+    margin: 0;
 }
 #header nav ul li{
     list-style: none;
@@ -46,7 +49,6 @@ a {
 
 #container {
     max-width: 960;
-    margin: 0 auto;
 }
 
 #section {
@@ -67,4 +69,3 @@ footer {
 footer p {
     margin-bottom: 0;
 }
-

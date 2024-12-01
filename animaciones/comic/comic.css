@@ -7,44 +7,42 @@ body {
 .comic {
     margin: 0;  
     text-align: center;
-    width: 600px;
-    border: 2px red solid;
+    width: 35%;
+    background-color: black;
 }  
 .img1 {
     margin: 0;
-    width: 90%;
+    width: 88%;
 }
 .img2 {
     margin: 0;
-    width: 90%; 
+    width: 88%; 
 }
 .img3 { 
     display: flex;
     align-items: start;
-    margin: 0;      
-    width: 30%;
-    margin-top: -50px;
+    margin-left: 6.2%;
+    width:32%;
+    margin-top: -8%;
 }
 .img4 {
     margin: 0;
-    width: 90%;
+    margin-top: -6.5%;
+    width: 88%;
 }       
 .img5 {
     margin: 0;
-    width: 90%;
-}
-.div6{
-    display: flex;
-    margin: 0;
-    width: auto;    
+    width: 88%;
 }
 .img6 {
-    margin-left: auto;
-    width: 40%;
+    margin-left: 60%;
+    width: 29%;
+    margin-top: -7%;
 }
 .img7 {
     margin: 0;
-    width: 90%;
+    width: 88%;
+    margin-top: -8.5%;
 }
 
 /*Animaciones
@@ -52,32 +50,32 @@ El hover es para cuando el cursor pase por encima
     - La primera imagen se hace más grande 
     - La segunda desaparece (con opacity)
     - La tercera se mueve hacia la derecha
-    - La cuarta se hace pequeño(Aumentar padding y disminuir    width) y se hace algo transparente
+    - La cuarta se hace pequeño(Aumentar padding y disminuir width) y se hace algo transparente
     - La quinta que baje y luego suba
     - La sexta se debe de mover haciendo una curva a la derecha y abajo
 
 
 */
 .img1:hover {
-    transform: scale(1.5);
+    width: 150%;
 }
 .img1 {
-    transition: transform 2s ease;
+    transition: width 2s ease;
 }
 .img2:hover {
-    opacity: 0.3; 
+    opacity: 0; 
 }
 .img2 {
-    transition: opacity 1.5s ease;
+    transition: opacity 3s ease;
 }
 .img3:hover {
-    transform: translateX(250px);
+    transform: translateX(300%);
 }
 .img3 {
-    transition: transform 1s ease;
+    transition: transform 2s ease;
 }
 .img4:hover {
-    padding: 10px; 
+    padding: 5%; 
     width: 50%;  
     opacity: 0.5;  
 }
@@ -85,28 +83,22 @@ El hover es para cuando el cursor pase por encima
     transition: all 1s ease;
 }
 .img5:hover {
-    transform: translateY(100px); 
+    transform: translateY(10vh); 
 }
 .img5 {
     transition: transform 1s ease;
 }
-.div6 .img6:hover {
-
-}
-.div6 .img6:hover {
-
-}
 .img6:hover {
-    transform: translate(150px, 150px) ; 
+    transform: translate(150%, 16vh); ; 
 }
 .img6 {
     transition: transform 2s ease;
 }
 .img7:hover {
-    transform: rotate(10000deg);
+    transform: rotate(1000000deg);
 }
 .img7 {
-    transition: transform 5s ease-in-out;
+    transition: transform 20s ease-in-out;
 }
 
 
